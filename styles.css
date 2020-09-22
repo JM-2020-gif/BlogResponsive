@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,400;0,600;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  box-shadow: 0 4px 25px -22px black;
+  z-index: 2;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 80px;
+  display: flex;
+  /*display flex help funtion justify-content and align-items*/
+  justify-content: center;
+  align-items: center;
+}
+
+.logo h1 b {
+  color: #1c9fa2;
+}
+
+.menu {
+  height: 80px;
+}
+
+.menu nav {
+  height: 100%;
+}
+
+.menu nav ul {
+  height: 100%;
+  display: flex;
+  list-style: none;
+}
+
+.menu nav ul li {
+  height: 100%;
+  margin: 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu nav ul li a {
+  color: #a54883;
+  font-size: 20px;
+}
+
+.menu nav ul li a:hover {
+  background-color: rgb(91, 214, 223);
+  border-radius: 20px;
+}
+
+/*cover page*/
+
+.container-cover {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  margin-top: 80px;
+  background-image: url(./photos/fondo.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-info-cover {
+  max-width: 800px;
+  height: 500px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-info-cover h1 {
+  font-size: 60px;
+  font-weight: 500;
+  color: #241f22;
+  margin-bottom: 20px;
+}
+
+.container-info-cover p {
+  color: #241f22;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/*container conten article*/
+
+.container-content {
+  width: 1200px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+article {
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 40px;
+  box-shadow: -10px 0 20px -30px black;
+  /*shadow articule*/
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  /*relativ whit the tex: top line green*/
+}
+
+/*top line green before the acticulo*/
+
+article::before {
+  content: "";
+  width: 100%;
+  height: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #1c9fa2;
+}
+
+article h1 {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+article p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #241f22;
+  text-align: justify;
+}
+
+article img {
+  width: 80%;
+  margin-top: 40px;
+  margin-left: 120px;
+}
+
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+footer .social .icons {
+  font-size: 20px;
+  margin: 20px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+footer .facebook .icons:hover {
+  background: #035aa6;
+}
+
+footer .twitter .icons:hover {
+  background: #0779e4;
+}
+
+/*effect for instagram icon gradient*/
+
+footer .instagram .icons:hover {
+  background: linear-gradient(to top right,
+      #fcde30,
+      #e9712a,
+      #d2313b,
+      #ae4198,
+      #7540a1,
+      #5443a8);
+}
+
+/*resposive Design */
+
+@media screen and (max-width: 1200px) {
+
+  .header,
+  .container-content,
+  .footer {
+    max-width: 800px;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .header,
+  .container-content,
+  .footer {
+    max-width: 600px;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menu {
+    height: 70vh;
+    background: #fff;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    overflow: hidden;
+    box-sizing: 10px 0 20px -25px black;
+  }
+
+  .menu nav ul {
+    flex-direction: column;
+  }
+
+  .menu nav ul li {
+    max-width: 100px;
+    height: 50px;
+    justify-content: center;
+  }
+
+  .menu nav ul li a {
+    margin-top: 40px;
+    display: inline-block;
+  }
+}
