@@ -11,6 +11,7 @@
 
 header {
   position: fixed;
+  /*positioned elements/static var*/
   top: 0;
   left: 0;
   width: 100%;
@@ -18,19 +19,21 @@ header {
   background: #fff;
   box-shadow: 0 4px 25px -22px black;
   z-index: 2;
+  /*order  in front of an element.
+  works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky).*/
 }
 
 .header-content {
   max-width: 1200px;
   margin: auto;
   display: flex;
+  /*display flex help the function justify-content and align-items*/
   justify-content: space-between;
 }
 
 .logo {
   height: 80px;
   display: flex;
-  /*display flex help funtion justify-content and align-items*/
   justify-content: center;
   align-items: center;
 }
@@ -39,6 +42,7 @@ header {
   color: #1c9fa2;
 }
 
+/*properties var menu*/
 .menu {
   height: 80px;
 }
